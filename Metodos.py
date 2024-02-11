@@ -1,4 +1,6 @@
 import csv
+import json
+
 
 class Metodos:
     def __init__(self, connection, db_name='pokeplaza'):
@@ -97,3 +99,34 @@ class Metodos:
                 collection.insert_one(row)
 
         print(f'Los datos del archivo CSV {csv_filename} han sido importados a la colección {collection_name}')
+
+    def export_to_json(self, collection_name, json_filename):
+        # Obtener los documentos de la colección
+        documents = list(self.find_documents(collection_name))
+
+        # Abrir el archivo JSON en modo escritura
+        with open(json_filename, 'w') as json_file:
+            # Utilizar json.dump() para escribir los documentos en formato JSON
+            json.dump(documents, json_file, default=str)
+
+        print(f'Los datos de la colección {collection_name} han sido exportados a {json_filename}')
+
+    def import_from_json(self, collection_name, json_filename):
+            if not json_filename.endswith('.json'):
+                print("El archivo proporcionado no es un archivo JSON válido.")
+                return
+
+            # Conectar con la colección
+            collection = self.db[collection_name]
+
+            # Leer los datos del archivo JSON y agregarlos a la colección
+            with open(json_filename, 'r') as json_file:
+                json_data = json.load(json_file)
+                if isinstance(json_data, list):
+                    for document in json_data:
+                        # Insertar el documento en la colección
+                        collection.insert_one(document)
+                    print(
+                        f'Los datos del archivo JSON {json_filename} han sido importados a la colección {collection_name}')
+                else:
+                    print("El contenido del archivo JSON no es una lista de documentos.")

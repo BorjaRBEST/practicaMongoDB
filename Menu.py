@@ -13,6 +13,8 @@ class Menu:
             print("7. Eliminar todos los documentos")
             print("8. Exportar a CSV")
             print("9. Importar desde CSV")
+            print("10. Exportar a JSON")
+            print("11. Importar desde JSON")
             print("12. Salir")
 
             choice = input("Seleccione una opción: ")
@@ -57,6 +59,15 @@ class Menu:
                 collection_name = input("Ingrese el nombre de la colección: ")
                 csv_filename = input("Ingrese el nombre del archivo CSV a importar: ")
                 self.metodos.import_from_csv(collection_name, csv_filename)
+            elif choice == '10':
+                collection_name = input("Ingrese el nombre de la coleccion: ")
+                json_filename = input("Ingrese el nombre del archivo JSON a importar: ")
+                self.metodos.export_to_json(collection_name, json_filename)
+                print("Los datos han sido correctamente exportados a JSON")
+            elif choice == '11':
+                collection_name = input("Ingrese el nombre de la coleccion: ")
+                json_filename = input("Ingrese el nombre del archivo JSON a importar: ")
+                self.metodos.import_from_json(collection_name, json_filename)
             elif choice == '12':
                 print("Saliendo del programa...")
                 break
