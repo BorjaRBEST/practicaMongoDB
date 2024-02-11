@@ -80,3 +80,20 @@ class Metodos:
                 csv_writer.writerow(list(doc.values()))
 
         print(f'Los datos de la colección {collection_name} han sido exportados a {csv_filename}')
+
+    def import_from_csv(self, collection_name, csv_filename):
+        if not csv_filename.endswith('.csv'):
+            print("El archivo proporcionado no es un archivo CSV válido.")
+            return
+
+        # Conectar con la colección
+        collection = self.db[collection_name]
+
+        # Leer los datos del archivo CSV y agregarlos a la colección
+        with open(csv_filename, 'r', newline='') as csvfile:
+            csv_reader = csv.DictReader(csvfile)
+            for row in csv_reader:
+                # Insertar el documento en la colección
+                collection.insert_one(row)
+
+        print(f'Los datos del archivo CSV {csv_filename} han sido importados a la colección {collection_name}')

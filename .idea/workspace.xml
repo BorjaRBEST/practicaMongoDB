@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a70b1da-58c5-4972-ad78-f86f289cf796" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+    <list default="true" id="7a70b1da-58c5-4972-ad78-f86f289cf796" name="Changes" comment="Añadido la opción de exportar una colección a formato .csv">
+      <change afterPath="$PROJECT_DIR$/product.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/Menu.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Metodos.py" beforeDir="false" afterPath="$PROJECT_DIR$/Metodos.py" afterDir="false" />
@@ -24,6 +24,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "Cocoroth"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ce689a74-f754-4666-830b-9d2dc7123903" />
+        <option name="url" value="https://github.com/BorjaRBEST/practicaMongoDB.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
@@ -95,14 +109,35 @@
       <updated>1707416380115</updated>
       <workItem from="1707416384051" duration="2466000" />
       <workItem from="1707669755563" duration="129000" />
-      <workItem from="1707669919354" duration="3612000" />
+      <workItem from="1707669919354" duration="4399000" />
     </task>
+    <task id="LOCAL-00001" summary="Añadido la opción de exportar una colección a formato .csv">
+      <option name="closed" value="true" />
+      <created>1707674474273</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1707674474273</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Añadido la opción de exportar una colección a formato .csv">
+      <option name="closed" value="true" />
+      <created>1707674531711</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1707674531711</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Añadido la opción de exportar una colección a formato .csv" />
+    <option name="LAST_COMMIT_MESSAGE" value="Añadido la opción de exportar una colección a formato .csv" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/practicaMongoDB$main.coverage" NAME="main Coverage Results" MODIFIED="1707674114182" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/practicaMongoDB$main.coverage" NAME="main Coverage Results" MODIFIED="1707675091097" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
