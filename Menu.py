@@ -11,7 +11,8 @@ class Menu:
             print("5. Mostrar todos los documentos")
             print("6. Búsqueda de documento")
             print("7. Eliminar todos los documentos")
-            print("8. Salir")
+            print("8. Exportar a CSV")
+            print("9. Salir")
 
             choice = input("Seleccione una opción: ")
 
@@ -48,6 +49,10 @@ class Menu:
                 self.metodos.delete_all_documents(collection_name)
                 print("Todos los documentos han sido eliminados.")
             elif choice == '8':
+                collection_name = input("Ingrese el nombre de la colección: ")
+                csv_filename = input("Ingrese el nombre del archivo CSV de destino: ")
+                self.metodos.export_to_csv(collection_name, csv_filename)
+            elif choice == '9':
                 print("Saliendo del programa...")
                 break
             else:

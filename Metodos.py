@@ -1,3 +1,5 @@
+import csv
+
 class Metodos:
     def __init__(self, connection, db_name='pokeplaza'):
         self.client = connection.get_client()
@@ -55,3 +57,26 @@ class Metodos:
         field_name = input(f"Ingrese el nombre del campo para la consulta en la colección {collection_name}: ")
         field_value = input("Ingrese el valor para {}: ".format(field_name))
         return {field_name: field_value}
+
+    def export_to_csv(self, collection_name, csv_filename):
+        if not csv_filename.endswith('.csv'):
+            csv_filename += '.csv'  # Agrega la extensión CSV si no está presente
+
+        # Obtener los documentos de la colección
+        documents = list(self.find_documents(collection_name))
+
+        # Abrir el archivo CSV en modo escritura
+        with open(csv_filename, 'w', newline='') as csvfile:
+            # Crear un escritor CSV
+            csv_writer = csv.writer(csvfile)
+
+            # Escribir el encabezado basado en las claves del primer documento
+            if documents:  # Verifica si hay documentos en la lista
+                header = list(documents[0].keys())
+                csv_writer.writerow(header)
+
+            # Escribir los documentos
+            for doc in documents:
+                csv_writer.writerow(list(doc.values()))
+
+        print(f'Los datos de la colección {collection_name} han sido exportados a {csv_filename}')
