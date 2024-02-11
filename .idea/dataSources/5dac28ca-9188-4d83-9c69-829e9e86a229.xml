@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@clustermedac.pzeoa6p.mongodb.net">
+  <database-model serializer="dbm" dbms="MONGO" family-id="MONGO" format-version="4.51">
+    <root id="1">
+      <ServerVersion>6.0.13</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="admin"/>
+    <schema id="3" parent="1" name="local"/>
+    <schema id="4" parent="1" name="pokeplaza">
+      <LastIntrospectionLocalTimestamp>2024-02-11.17:22:53</LastIntrospectionLocalTimestamp>
+    </schema>
+    <table id="5" parent="4" name="pokemon"/>
+    <column id="6" parent="5" name="_id">
+      <DasType>ObjectId|12s</DasType>
+      <Position>1</Position>
+    </column>
+    <column id="7" parent="5" name="nivel">
+      <DasType>Int32|4s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="8" parent="5" name="nombre">
+      <DasType>String|12s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="9" parent="5" name="tipo">
+      <DasType>String|12s</DasType>
+      <Position>4</Position>
+    </column>
+  </database-model>
+</dataSource>
