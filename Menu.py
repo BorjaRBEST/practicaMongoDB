@@ -2,6 +2,7 @@ class Menu:
     def __init__(self, metodos):
         self.metodos = metodos
 
+    # Menú principal en el que se realizan las diferentes opciones
     def menu_principal(self):
         while True:
             print("1. Insertar documento")
