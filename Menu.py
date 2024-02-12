@@ -7,6 +7,10 @@ class Menu:
     def menu_principal(self):
         while True:
             #Opciones del menú
+            print("*****BIENVENIDOS A POKEPLAZA*****")
+            print("---------------------------------")
+            print("Menu principal")
+            print("---------------------------------")
             print("1. Insertar documento")
             print("2. Actualizar documento")
             print("3. Reemplazar documento")
@@ -18,7 +22,8 @@ class Menu:
             print("9. Importar desde CSV")
             print("10. Exportar a JSON")
             print("11. Importar desde JSON")
-            print("12. Salir")
+            print("12. Importar nueva colección")
+            print("13. Salir")
 
             choice = input("Seleccione una opción: ")
 
